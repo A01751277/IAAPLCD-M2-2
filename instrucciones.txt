@@ -1,0 +1,31 @@
+Actividad Retroalimentación Módulo 2
+
+Alejandro Somarriba Aguirre
+A01751277
+
+--Instrucciones--
+
+- Colocar el archivo "MLPerceptron.py" en un carpeta vacía
+- Abrir la terminal en la carpeta
+- Si no se tiene Python instalado, escribir "python" en la consola y obtenerlo
+- Para instalar las librerías usadas, escribir "pip install pandas", "pip install -U scikit-learn", "pip install seaborn" y luego "pip install -U matplotlib"
+	- Esperar a que terminen de instalarse
+- Para correr el archivo, escribir "python MLPerceptron.py" y esperar
+
+--Sobre el conjunto de datos--
+- Es un conjunto de datos para clasificar digitos del 0 al 9 escritos a mano
+- Los datos se importan directamente desde el archivo .py, así que no es necesario un archivo aparte
+
+--Notas--
+
+- Se hace una división al azar de los datos, tomando 80% para el entrenamiento y 20% para pruebas
+- El archivo entrena un perceptrón multi-capa con el conjunto de datos
+- Al finalizar el entrenamiento, realiza pruebas con un subconjunto de los datos reservado para este fin
+- Al final, se despliegan las métricas de evaluación del modelo, así como una gráfica que muestra la pérdida por cada iteración del entrenamiento, y al final una matriz de confusión
+
+--Interpretación--
+- La capa de entrada tiene 64 neuronas porque los datos de entrada son imágenes de 8 x 8 px
+- Para este modelo, se añadió una capa oculta con 32 neuronas y otra con 10
+- Ambas capas ocultas usan la función de activación ReLU, pero la capa de salida usa la función Softmax
+- El modelo va actualizando parámetros con el algoritmo de Stochastic Gradient Descent, con una tasa de aprendizaje de 0.001 que se mantiene constante a lo largo del entrenamiento
+- El modelo entrena por 200 iteraciones, y en cada una se imprime el valor de loss
